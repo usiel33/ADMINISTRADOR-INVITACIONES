@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700;800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700;800&display=swap');
         
         * {
             margin: 0;
@@ -224,6 +224,17 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.2);
         }
 
+        .header-tarjeta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .info-invitado {
+            flex: 1;
+        }
+
         .nombre-invitado {
             font-size: 1.5rem;
             font-weight: 800;
@@ -246,6 +257,41 @@
             letter-spacing: 0.5px;
         }
 
+        .boton-whatsapp {
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .boton-whatsapp:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            background: #128C7E;
+        }
+
+        .boton-whatsapp.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .boton-whatsapp.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
         .mensaje-invitado {
             background: rgba(255, 255, 255, 0.7);
             padding: 15px;
@@ -257,11 +303,22 @@
             border-left: 4px solid #4ecdc4;
         }
 
+        .footer-tarjeta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .fecha-invitacion {
             font-size: 0.9rem;
             color: #7f8c8d;
             font-weight: 600;
-            text-align: right;
+        }
+
+        .numero-telefono {
+            font-size: 0.9rem;
+            color: #25D366;
+            font-weight: 700;
         }
 
         .loading {
@@ -317,4 +374,41 @@
             .estadisticas {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .header-tarjeta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .boton-whatsapp {
+                align-self: flex-end;
+            }
         }
+
+        .whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.boton-whatsapp {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-whatsapp:hover .whatsapp-icon {
+    transform: scale(1.1);
+}
+
+.disabled-icon {
+    opacity: 0.4;
+    pointer-events: none;
+}
