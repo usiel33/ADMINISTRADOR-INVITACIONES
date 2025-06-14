@@ -1,77 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Invitaciones - Cumpleaños</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Invitaciones - Cumpleaños</title>
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
-    <div class="header">
-        <h1 class="titulo-principal">🎉 INVITACIONES 🎂</h1>
-        <p class="subtitulo">Panel de gestión de invitados</p>
-    </div>
+  <div class="header">
+    <h1 class="titulo-principal">🎉 INVITACIONES 🎂</h1>
+    <p class="subtitulo">Panel de gestión de invitados</p>
+  </div>
 
-    <div class="panel-controles">
-        <div class="controles-grid">
-            <div class="campo-control">
-                <label class="label-control">🔍 Buscar por nombre</label>
-                <input type="text" id="buscador" class="input-control" placeholder="Escribe el nombre del invitado...">
-            </div>
-            
-            <div class="campo-control">
-                <label class="label-control">📅 Filtrar por fecha</label>
-                <select id="filtroFecha" class="select-control">
-                    <option value="todos">Todas las fechas</option>
-                    <option value="hoy">Hoy</option>
-                    <option value="semana">Última semana</option>
-                    <option value="mes">Último mes</option>
-                </select>
-            </div>
-            
-            <div class="campo-control">
-                <label class="label-control">🔄 Ordenar por</label>
-                <select id="ordenar" class="select-control">
-                    <option value="fecha-desc">Más recientes</option>
-                    <option value="fecha-asc">Más antiguos</option>
-                    <option value="nombre-asc">Nombre (A-Z)</option>
-                    <option value="nombre-desc">Nombre (Z-A)</option>
-                </select>
-            </div>
-            
-            <div class="campo-control">
-                <button id="btnRefrescar" class="boton-refrescar">
-                    🔄 Actualizar datos
-                </button>
-            </div>
-        </div>
+  <div class="panel-controles">
+    <div class="controles-grid">
+      <div class="campo-control">
+        <label class="label-control">🔍 Buscar por nombre</label>
+        <input type="text" id="buscador" class="input-control" placeholder="Escribe el nombre del invitado..." />
+      </div>
+      <div class="campo-control">
+        <label class="label-control">📅 Filtrar por fecha</label>
+        <select id="filtroFecha" class="select-control">
+          <option value="todos">Todas las fechas</option>
+          <option value="hoy">Hoy</option>
+          <option value="semana">Última semana</option>
+          <option value="mes">Último mes</option>
+        </select>
+      </div>
+      <div class="campo-control">
+        <label class="label-control">🔄 Ordenar por</label>
+        <select id="ordenar" class="select-control">
+          <option value="fecha-desc">Más recientes</option>
+          <option value="fecha-asc">Más antiguos</option>
+          <option value="nombre-asc">Nombre (A-Z)</option>
+          <option value="nombre-desc">Nombre (Z-A)</option>
+        </select>
+      </div>
+      <div class="campo-control">
+        <button id="btnRefrescar" class="boton-refrescar">🔄 Actualizar datos</button>
+      </div>
     </div>
+  </div>
 
-    <div class="estadisticas">
-        <div class="stat-card">
-            <div class="stat-numero" id="totalInvitados">0</div>
-            <div class="stat-label">Total invitados</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-numero" id="invitadosHoy">0</div>
-            <div class="stat-label">Hoy</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-numero" id="invitadosSemana">0</div>
-            <div class="stat-label">Esta semana</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-numero" id="relacionesUnicas">0</div>
-            <div class="stat-label">Tipos de relación</div>
-        </div>
+  <div class="estadisticas">
+    <div class="stat-card">
+      <div class="stat-numero" id="totalInvitados">0</div>
+      <div class="stat-label">Total invitados</div>
     </div>
-
-    <div id="loading" class="loading">
-        <div class="spinner"></div>
-        <div>Cargando invitaciones...</div>
+    <div class="stat-card">
+      <div class="stat-numero" id="invitadosHoy">0</div>
+      <div class="stat-label">Hoy</div>
     </div>
+    <div class="stat-card">
+      <div class="stat-numero" id="invitadosSemana">0</div>
+      <div class="stat-label">Esta semana</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-numero" id="relacionesUnicas">0</div>
+      <div class="stat-label">Tipos de relación</div>
+    </div>
+  </div>
 
-    <div id="gridInvitaciones" class="grid-invitaciones"></div>
+  <div id="loading" class="loading">
+    <div class="spinner"></div>
+    <div>Cargando invitaciones...</div>
+  </div>
+
+  <div id="gridInvitaciones" class="grid-invitaciones"></div>
 
   <script src="js/script.js"></script>
 </body>
