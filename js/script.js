@@ -2,7 +2,8 @@
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5-WLlt3_XY5k2NgJyyHepMjk2r0oAzrCeGSIaqNkTjm1Oe9Ua1gRlGNVxQDUBfcwZOg/exec';
 
     // CONFIGURA AQUÍ LA URL DE TU IMAGEN DE WHATSAPP (puedes usar un emoji como ícono)
-    const WHATSAPP_ICON_URL = '../img/icono.png';
+  const WHATSAPP_ICON_URL = 'https://cdn-icons-png.flaticon.com/512/733/733585.png';
+
 
     let todasLasInvitaciones = [];
     let invitacionesFiltradas = [];
