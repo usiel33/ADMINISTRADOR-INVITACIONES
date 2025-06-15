@@ -1,15 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Panel de Invitaciones - Cumpleaños</title>
-  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <div class="header">
-    <h1 class="titulo-principal">🎉 INVITACIONES 🎂</h1>
-    <p class="subtitulo">Panel de gestión de invitados</p>
+  <!-- Container del header con imágenes -->
+  <div class="header-container">
+    <div class="img-izquierda">
+      <img src="img/stich-leyendo.png" alt="Stitch leyendo">
+    </div>
+    
+    <div class="header">
+      <h1 class="titulo-principal">INVITACIONES</h1>
+      <p class="subtitulo">Panel de gestión de invitados</p>
+    </div>
+    
+    <div class="img-derecha">
+      <img src="img/stich-traje.png" alt="Stitch con traje">
+    </div>
   </div>
 
   <div class="panel-controles">
@@ -40,24 +52,32 @@
         <button id="btnRefrescar" class="boton-refrescar">🔄 Actualizar datos</button>
       </div>
     </div>
+    
+    <div class="filtros-estado">
+      <button id="filtroTodos" class="boton-filtro activo">👥 Todos</button>
+      <button id="filtroAsisten" class="boton-filtro">✅ Asisten</button>
+      <button id="filtroNoAsisten" class="boton-filtro">❌ No Asisten</button>
+      <button id="filtroFamiliares" class="boton-filtro">👨‍👩‍👧‍👦 Familiares</button>
+      <button id="filtroExtranos" class="boton-filtro">🤝 Conocidos</button>
+    </div>
   </div>
 
   <div class="estadisticas">
+    <div class="stat-card">
+      <div class="stat-numero" id="totalAsisten">0</div>
+      <div class="stat-label">Asisten</div>
+    </div>
     <div class="stat-card">
       <div class="stat-numero" id="totalInvitados">0</div>
       <div class="stat-label">Total invitados</div>
     </div>
     <div class="stat-card">
-      <div class="stat-numero" id="invitadosHoy">0</div>
-      <div class="stat-label">Hoy</div>
+      <div class="stat-numero" id="familiares">0</div>
+      <div class="stat-label">Familiares</div>
     </div>
     <div class="stat-card">
-      <div class="stat-numero" id="invitadosSemana">0</div>
-      <div class="stat-label">Esta semana</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-numero" id="relacionesUnicas">0</div>
-      <div class="stat-label">Tipos de relación</div>
+      <div class="stat-numero" id="conocidos">0</div>
+      <div class="stat-label">Conocidos</div>
     </div>
   </div>
 
